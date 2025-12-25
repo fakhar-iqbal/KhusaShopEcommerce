@@ -1,0 +1,26 @@
+# Git
+.git
+.gitignore
+
+# Go
+bin/
+*.exe
+*.o
+*.so
+
+# Environment
+.env
+.env.local
+
+# Editor
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Other
+node_modules
+dist
+coverage
