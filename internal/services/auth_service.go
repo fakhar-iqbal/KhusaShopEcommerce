@@ -75,11 +75,14 @@ func (s *AuthService) Register(ctx context.Context, input models.User, password 
 		return err
 	}
 
-	// 6. Send Email
-	if err := s.emailService.SendOTP(input.Email, otpCode); err != nil {
-		// Log error but don't fail registration completely? Or fail?
-		return fmt.Errorf("failed to send email: %v", err)
-	}
+
+	// 6. Send Email (async - don't block signup)
+	go func() {
+		if err := s.emailService.SendOTP(input.Email, otpCode); err != nil {
+			// Log error but don't fail registration
+			fmt.Printf("Warning: Failed to send OTP email to %s: %v\n", input.Email, err)
+		}
+	}()
 
 	return nil
 }
