@@ -50,3 +50,32 @@ func (r *OrderRepository) FindByUserID(ctx context.Context, userID primitive.Obj
 
 	return orders, nil
 }
+
+func (r *OrderRepository) FindByID(ctx context.Context, orderID primitive.ObjectID) (*models.Order, error) {
+	var order models.Order
+	err := r.collection.FindOne(ctx, bson.M{"_id": orderID}).Decode(&order)
+	if err != nil {
+		return nil, err
+	}
+	return &order, nil
+}
+
+func (r *OrderRepository) Update(ctx context.Context, order *models.Order) error {
+	order.UpdatedAt = time.Now()
+	filter := bson.M{"_id": order.ID}
+	update := bson.M{"$set": order}
+	_, err := r.collection.UpdateOne(ctx, filter, update)
+	return err
+}
+
+func (r *OrderRepository) UpdateStatus(ctx context.Context, orderID primitive.ObjectID, status string, paymentStatus string) error {
+	update := bson.M{
+		"$set": bson.M{
+			"status":        status,
+			"paymentStatus": paymentStatus,
+			"updatedAt":     time.Now(),
+		},
+	}
+	_, err := r.collection.UpdateOne(ctx, bson.M{"_id": orderID}, update)
+	return err
+}

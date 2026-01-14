@@ -102,7 +102,7 @@ func getInitialProducts() []models.Product {
 	return []models.Product{
 		{
 			Name:          "Golden Motia Khusa",
-			Category:      "Formal Khusas",
+			Category:      "Formal",
 			Price:         3500,
 			OriginalPrice: ptr(4200),
 			Discount:      ptr(17),
@@ -129,7 +129,7 @@ func getInitialProducts() []models.Product {
 		},
 		{
 			Name:        "Gul-e-Lala",
-			Category:    "Casual Collection",
+			Category:    "Casual",
 			Price:       2500,
 			Image:       "https://lh3.googleusercontent.com/aida-public/AB6AXuBqp3j1fln4JMEWno5HYANcnFb-86pMs1gDs8Mjw4XQBMWLyuw2ieGAFXIukKoqrLCWZAdneekJEl1jacE5giuiGTrhxO2bjFgkFzpuZzJGHC31OJnr8RrjTWjwDDdYztIO8hAV-tRo7EspCCyljkEngy3bGnN6UDMkFBtQZCB3zCY6sfvJTwO420w82bzjss8LsDg0Req0lAdU0QgWqSVMuT6WsDdX64UHtjgXWddZl5sPKnIladgrr2gIsDrhomAyic4ZhI2la9o",
 			Images:      []string{"https://lh3.googleusercontent.com/aida-public/AB6AXuBqp3j1fln4JMEWno5HYANcnFb-86pMs1gDs8Mjw4XQBMWLyuw2ieGAFXIukKoqrLCWZAdneekJEl1jacE5giuiGTrhxO2bjFgkFzpuZzJGHC31OJnr8RrjTWjwDDdYztIO8hAV-tRo7EspCCyljkEngy3bGnN6UDMkFBtQZCB3zCY6sfvJTwO420w82bzjss8LsDg0Req0lAdU0QgWqSVMuT6WsDdX64UHtjgXWddZl5sPKnIladgrr2gIsDrhomAyic4ZhI2la9o"},
@@ -147,7 +147,7 @@ func getInitialProducts() []models.Product {
 		},
 		{
 			Name:        "Midnight Gold",
-			Category:    "Formal Wear",
+			Category:    "Formal",
 			Price:       3200,
 			Image:       "https://lh3.googleusercontent.com/aida-public/AB6AXuCdJsk6X6eJcdicOa5ZGgIjUaN95koq_uJC2twqk3ICXjKdLzNy868qD_fOso8wMW9jwWt7-94icpPK7ys1PiN7TwryN12eOPRrq3tY57mM9mcfyrj0f3YbvNMjoJcs61ZzklG_VzcsgjmY34YGUhy4YOBdFC5FnDEp1BgI6236v-7Onvst84aAH5XvncwL417rSJB0EatiO2vdKZNnnEhja8ltCMQ6cl3LceqtJ63PreWpe-HI1IZgVv0Qlln1Rg72LLQKHMs979I",
 			Images:      []string{"https://lh3.googleusercontent.com/aida-public/AB6AXuCdJsk6X6eJcdicOa5ZGgIjUaN95koq_uJC2twqk3ICXjKdLzNy868qD_fOso8wMW9jwWt7-94icpPK7ys1PiN7TwryN12eOPRrq3tY57mM9mcfyrj0f3YbvNMjoJcs61ZzklG_VzcsgjmY34YGUhy4YOBdFC5FnDEp1BgI6236v-7Onvst84aAH5XvncwL417rSJB0EatiO2vdKZNnnEhja8ltCMQ6cl3LceqtJ63PreWpe-HI1IZgVv0Qlln1Rg72LLQKHMs979I"},
@@ -164,7 +164,7 @@ func getInitialProducts() []models.Product {
 		},
 		{
 			Name:        "Azure Breeze",
-			Category:    "Casual Soft Leather",
+			Category:    "Casual",
 			Price:       2100,
 			Image:       "https://lh3.googleusercontent.com/aida-public/AB6AXuAYaZx2ZQzMtv70bVUU98SUdJNO63nMyE1pY5DItDBqsPUbsdWmZeKmvN-oEdTlEhWN_W_e5pHOwwdILaQXvaA63M8qsFhlZIx4SqYGIutBnqtXM8r0xpAHc_V-SlBfE3aywXeiJr0KLWdIxcLVZ5D7-IcrHAnzzOG9oPx5x3s8JUKOKn6TZ-1D49xe4VLJhD2bIAsLtp8QzJ5k7K1p9lymBEUGgsHqdxeq17C2h8Tt4uceacnQ-WC__RJa6eG48AM-rh-xtKfopE4",
 			Images:      []string{"https://lh3.googleusercontent.com/aida-public/AB6AXuAYaZx2ZQzMtv70bVUU98SUdJNO63nMyE1pY5DItDBqsPUbsdWmZeKmvN-oEdTlEhWN_W_e5pHOwwdILaQXvaA63M8qsFhlZIx4SqYGIutBnqtXM8r0xpAHc_V-SlBfE3aywXeiJr0KLWdIxcLVZ5D7-IcrHAnzzOG9oPx5x3s8JUKOKn6TZ-1D49xe4VLJhD2bIAsLtp8QzJ5k7K1p9lymBEUGgsHqdxeq17C2h8Tt4uceacnQ-WC__RJa6eG48AM-rh-xtKfopE4"},
@@ -207,7 +207,7 @@ func getInitialProducts() []models.Product {
 		},
 		{
 			Name:        "Golden Tilla Khusa",
-			Category:    "Bridal Collection",
+			Category:    "Bridal",
 			Price:       4500,
 			IsNew:       true,
 			Image:       "https://lh3.googleusercontent.com/aida-public/AB6AXuBQNCFPy7HUp28Z1JDpAG-GDuiUw5659BLn2LD5hGaD83uHhxDAyyDT2CvJF0Usggy90xVSl5CgQIIWX6j1gWQ4EaIKo-eMaBqe9Pa4EoaADmY5TFAAa5RuQ1h9sk-ZFpsB_ZTEgyw0HNdd4f7f4jH4JMB7Jv68cR-oRrNt4sKMvCrPZMMNhflwUPY5NBOIaH-rlz1rjvGUZJvlbQdVRz9k06lF8JmNDt1LEct_EX5Be74qcFqWlA-zXAGpn1oIy2gw5HkCJRpDU3o",
@@ -224,7 +224,7 @@ func getInitialProducts() []models.Product {
 		},
 		{
 			Name:          "Scarlet Velvet Dream",
-			Category:      "Velvet Series",
+			Category:      "Velvet",
 			Price:         3200,
 			OriginalPrice: ptr(4000),
 			Discount:      ptr(20),

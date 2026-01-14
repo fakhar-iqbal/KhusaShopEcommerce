@@ -12,4 +12,5 @@ func RegisterOrderRoutes(router fiber.Router, handler *handlers.OrderHandler) {
 	orders.Use(middleware.Protected())
 
 	orders.Get("/", handler.GetOrders)
+	orders.Post("/", handler.CreateOrder)
 }

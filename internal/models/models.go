@@ -98,8 +98,10 @@ type Order struct {
 	SubTotal        float64            `json:"subTotal" bson:"subTotal"`
 	ShippingCost    float64            `json:"shippingCost" bson:"shippingCost"`
 	Total           float64            `json:"total" bson:"total"`
+	PaymentMethod   string             `json:"paymentMethod" bson:"paymentMethod"` // cod, card, jazzcash, easypaisa
 	Status          string             `json:"status" bson:"status"`               // pending, processing, shipped, delivered, cancelled
 	PaymentStatus   string             `json:"paymentStatus" bson:"paymentStatus"` // pending, completed, failed
+	SessionID       string             `json:"sessionId,omitempty" bson:"sessionId,omitempty"`
 	CreatedAt       time.Time          `json:"createdAt" bson:"createdAt"`
 	UpdatedAt       time.Time          `json:"updatedAt" bson:"updatedAt"`
 }
@@ -132,4 +134,14 @@ type Wishlist struct {
 	Products  []primitive.ObjectID `json:"products" bson:"products"`
 	CreatedAt time.Time            `json:"createdAt" bson:"createdAt"`
 	UpdatedAt time.Time            `json:"updatedAt" bson:"updatedAt"`
+}
+
+// OrderDetailsItem helper for emails
+type OrderDetailsItem struct {
+	Name     string
+	Image    string
+	Quantity int
+	Price    float64
+	Size     string
+	Color    string
 }

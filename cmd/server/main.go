@@ -75,7 +75,8 @@ func main() {
 	// Initialize services
 	emailService := services.NewEmailService()
 	authService := services.NewAuthService(userRepo, otpRepo, emailService)
-	orderService := services.NewOrderService(orderRepo)
+	paymentService := services.NewPaymentService()
+	orderService := services.NewOrderService(orderRepo, paymentService, emailService, userRepo, productRepo)
 	cartService := services.NewCartService(cartRepo, productRepo)             // [NEW]
 	wishlistService := services.NewWishlistService(wishlistRepo, productRepo) // [NEW]
 
